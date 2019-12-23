@@ -6,7 +6,6 @@ import java.util.Locale;
 
 import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
-//import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -14,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomePageController
 {
-    @RequestMapping(value = "/HomePage", method = RequestMetod.GET)
-    public String homeContent(Locale locale, Model model)
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String HomeContoller(Locale locale, Model model)
     {
     	System.out.println("Home Page Requested, locale = " + locale);
 	
