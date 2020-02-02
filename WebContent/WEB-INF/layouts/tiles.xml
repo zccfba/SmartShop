@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+   "-//Apache  Software Foundation//DTD Tiles  Configuration 2.1//EN"
+   "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="base" template="/WEB-INF/layouts/mainpage.jsp">
+		<put-attribute name="header"	value="/WEB-INF/layouts/header.jsp" />
+		<put-attribute name="menu"		value="/WEB-INF/layouts/menu.jsp" />
+		<put-attribute name="footer"	value="/WEB-INF/layouts/footer.jsp" />
+	</definition>
+	
+	<definition name="home" extends="base">
+		<put-attribute name="body"		value="/WEB-INF/views/homepage.jsp" />
+	</definition>	
+
+	<definition name="LoginForm" extends="base">
+		<put-attribute name="body"		value="/WEB-INF/views/LoginForm.jsp" />
+	</definition>
+	
+	<definition name="registerForm" extends="base">
+		<put-attribute name="body"		value="/WEB-INF/views/registerForm.jsp" />
+	</definition>	
+
+	<definition name="userProfile" extends="base">
+		<put-attribute name="body"		value="/WEB-INF/views/userProfile.jsp" />
+	</definition>	
+
+	<definition name="productList" extends="base">
+		<put-attribute name="body"		value="/WEB-INF/views/productList.jsp" />
+	</definition>	
+
+	<definition extends="base" name="login">
+		<put-attribute name="body"		value="/WEB-INF/views/login.jsp" />
+	</definition>
+	
+	<definition extends="base" name="home">
+		<put-attribute name="body"		value="/WEB-INF/views/homepage.jsp" />
+	</definition>
+
+</tiles-definitions>
+
+
+
