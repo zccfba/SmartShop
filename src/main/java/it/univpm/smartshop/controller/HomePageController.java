@@ -11,23 +11,27 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 
 @Controller
+@RequestMapping({"/", "/homepage"})
 public class HomePageController
 {
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String HomeContoller(Locale locale, Model model)
+    String appName = "SmartShop";
+    
+    @RequestMapping(method = RequestMethod.GET)
+    public String HomeController(Locale locale, Model model)
     {
-    	System.out.println("Home Page Requested, locale = " + locale);
-	
+    	
 	Date date = new Date();
 	DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 
 	String formattedDate = dateFormat.format(date);
 
 	model.addAttribute("serverTime", formattedDate);
-	
-	String appName = "SmartShop";
 	model.addAttribute("appName", appName);
 
+	//System.out.println("Home Page Requested, locale = " + locale + " " + formattedDate + " " + appName);
+	
+	System.out.println("Home Page Requested");
+	
 	return "homepage";
     }
 }

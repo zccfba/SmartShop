@@ -63,15 +63,14 @@ public class User
     {
         return id_user;
     }
-
-    
-    
+   
     public void setId_user(String id_user)
     {
         this.id_user = id_user;
     }
-@OneToOne(mappedBy = "id_user", cascade = CascadeType.ALL)
-@JoinColumn(name = "ID_Usertype")
+    
+    @OneToOne(mappedBy = "id_user", cascade = CascadeType.ALL)
+    @JoinColumn(name = "ID_Usertype")
     public String getId_type()
     {
         return id_type;

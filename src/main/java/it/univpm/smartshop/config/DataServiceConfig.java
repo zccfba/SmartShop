@@ -1,5 +1,6 @@
 package it.univpm.smartshop.config;
 
+
 import java.io.IOException;
 import java.util.Properties;
 
@@ -23,8 +24,11 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import it.univpm.smartshop.test.DataServiceConfigTest;
 
 
+
+
+
 @Configuration
-@ComponentScan(basePackages = { "it.univpm.smartshop.model" },
+@ComponentScan(basePackages = { "it.univpm.smartshop" },
 		excludeFilters  = { @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = { DataServiceConfigTest.class }) } )
 
 @EnableTransactionManagement
